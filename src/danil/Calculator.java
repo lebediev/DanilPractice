@@ -3,9 +3,6 @@
  */
 package danil;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @author Denis Lebedev
  */
