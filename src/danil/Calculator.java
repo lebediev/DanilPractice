@@ -45,11 +45,6 @@ public class Calculator
         throw new UnsupportedOperationException("You implement this");
     }
 
-    private static Boolean getDir(int[] numbers, int i0, int i1)
-    {
-        return numbers[i1] > numbers[i0] ? Boolean.TRUE : (numbers[i1] < numbers[i0] ? Boolean.FALSE : null);
-    }
-
     public int computeStringWidth(String s)
     {
         return s.length();
