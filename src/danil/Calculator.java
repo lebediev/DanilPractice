@@ -3,6 +3,9 @@
  */
 package danil;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * @author Denis Lebedev
  */
@@ -16,6 +19,35 @@ public class Calculator
     public int mult(int a, int b)
     {
         return a*b;
+    }
+
+    /**
+     * @param n sequence length
+     * @return fibonacci sequence of specified length. Sequence starts from 1, not 0.
+     * @throws IllegalArgumentException if n is less than 2
+     */
+    public int[] fibonacci(int n)
+    {
+        throw new UnsupportedOperationException("You implement this");
+    }
+
+    /**
+     * Finds missing integers in the array. Array is supposed to contain subsequent integers with the step of 1.
+     * If any integer skipped then it is a missing integer. Examples: 1,2,3,5,6; 5,3,2,1 - 4 is missing in both cases.
+     * Another example: 1,2,5 - 3 and 4 are missing.
+     * Array MAY contain equal numbers. Examples: 1,2,2,2,3,3,4; 4,4,4,3,3,3; 1,1,1,1
+     * @param numbers array of numbers, sorted acsending or descending
+     * @return set of missing numbers
+     * @throws IllegalArgumentException if array length is less than 2 or if array is not sorted
+     */
+    public Set<Integer> findMissingNumbers(int... numbers)
+    {
+        throw new UnsupportedOperationException("You implement this");
+    }
+
+    private static Boolean getDir(int[] numbers, int i0, int i1)
+    {
+        return numbers[i1] > numbers[i0] ? Boolean.TRUE : (numbers[i1] < numbers[i0] ? Boolean.FALSE : null);
     }
 
     public int computeStringWidth(String s)
