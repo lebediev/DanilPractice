@@ -18,7 +18,10 @@ public class Calculator
 
     public int mult(int a, int b)
     {
-        return a*b;
+        // I changed something
+        int x=a;
+        int y=b;
+        return x*y;
     }
 
     /**
