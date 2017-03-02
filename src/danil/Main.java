@@ -2,20 +2,24 @@ public class Main {
 
     public static void main(String[] args) {
 
-        fibonacci(15);
-
-    }
-    static int[] fibonacci(int n) {
-        int[] F = new int[n];
-        int k = n - 1;
-        F[0] = 0;
-        F[1] = 1;
-        System.out.println(F[1]);
-        for (int i = 2; i <= k; i++) {
-            int i2 = i - 2;
-            int i1 = i - 1;
-            F[i] = F[i1] + F[i2];
-            System.out.println(F[i]);
+        Set<Integer> set = new TreeSet<Integer>();
+        set.add(10);
+        set.add(2);
+        set.add(1);
+        set.add(5);
+        
+        Integer[] arr = set.toArray(new Integer[set.size()]);
+        
+        for (int y = 0; y<arr.length; y++){
+           if (arr[y+1]-arr[y] != 1) {
+               int m = arr[y + 1] - arr[y] - 1;
+               int[] arrF = new int[m];
+               //System.out.println("M: "+m);
+               for (int z = 0; z < m; z++) {
+                   arrF[z] = arr[y] + 1;
+                   arr[y]++;
+                   System.out.println("arrFz: "+arrF[z]);
+               }
+           }
         }
-        return F;
     }
