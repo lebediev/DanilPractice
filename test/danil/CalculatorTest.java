@@ -137,6 +137,10 @@ public class CalculatorTest extends Assert
 
         assertArrayEquals(new String[]{"aaaa"}, calculator_.wrapString("aaaa", 3));
 
+        assertArrayEquals(new String[]{"aa", "aaaa"}, calculator_.wrapString("aa aaaa", 3));
+
+        assertArrayEquals(new String[]{"aa", "bb", "cccc dd"}, calculator_.wrapString("aa bb cccc dd", 3));
+
         assertArrayEquals(new String[]{"aa", "bbbb cc"}, calculator_.wrapString("aa bbbb cc", 3));
     }
 
