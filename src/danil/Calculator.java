@@ -3,7 +3,9 @@
  */
 package danil;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -55,7 +57,35 @@ public class Calculator
 
     public String[] wrapString(String s, int w)
     {
-        throw new UnsupportedOperationException("You implement this");
+        List<String> list = new ArrayList<>();
+
+        StringBuilder currentSb = new StringBuilder();
+        int i = 0;
+        while (i < s.length())
+        {
+            int nextSpace = s.indexOf(' ', i);
+            if (nextSpace == -1 || nextSpace-i > w)
+            {
+                currentSb.append(s.substring(i));
+                i = s.length();
+            }
+            else
+            {
+                currentSb.append(s.substring(i, nextSpace+1));
+                i = nextSpace+1;
+            }
+            if (currentSb.length() >= w)
+            {
+                if (currentSb.charAt(currentSb.length()-1) == ' ')
+                {
+                    currentSb.setLength(currentSb.length()-1);
+                }
+                list.add(currentSb.toString());
+                currentSb.setLength(0);
+            }
+        }
+
+        return list.toArray(new String[list.size()]);
     }
 
     public static void main(String[] args)
