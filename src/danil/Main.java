@@ -1,25 +1,14 @@
-public static Set<Integer> findMissingNumbers(int... numbers)
-    {
-        
-        Set<Integer> set = new TreeSet<Integer>();
-        for( Integer i : numbers ){
-            set.add(Integer.valueOf(i));
-            }
-        Integer[] arr = set.toArray(new Integer[set.size()]);
+import java.util.List;
 
-        Set<Integer> arrF1 = new TreeSet<Integer>();
+public class Main {
 
-        for (int y = 0; y < arr.length - 1; y++){
-            if (arr[y+1]-arr[y] != 1) {
-                int m = arr[y + 1] - arr[y] - 1;
-               
-                for (int z = 0; z < m; z++) {
-                   
-                    arrF1.add(Integer.valueOf(arr[y] + 1));
-                    arr[y]++;
-                   
-                }
-            }
-        }
-    return arrF1;
+    public static void main (String[] args){
+
+        List<Integer> uzel1 = Uzel.setSosedi(3);
+        List<Integer> uzel2 = Uzel.setSosedi(3);
+        List<Integer> uzel3 = Uzel.setSosedi(1);
+        List<Integer> uzel0 = Uzel.setSosedi(1,2,3);
+
     }
+
+}
