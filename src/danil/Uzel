@@ -1,5 +1,18 @@
+package graf;
+
+import java.util.HashSet;
+import java.util.Set;
+
 public class Uzel {
 
-    public int[] sosedi;
+    Set<Integer> arr = new HashSet<>();;
+
+    public void setToArr(int id){
+        arr.add(id);
+    }
+
+    public void delToArr(int id){
+        arr.remove(id);
+    }
 
 }
