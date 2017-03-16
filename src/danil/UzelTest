@@ -1,0 +1,38 @@
+package graf;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import static junit.framework.TestCase.assertEquals;
+
+public class UzelTest {
+
+        private Uzel uzel_;
+        Set<Integer> test = new HashSet<>();
+
+        @Before
+        public void setUp()
+        {
+            uzel_ = new Uzel();
+        }
+
+        @Test
+        public void testUzel() {
+            uzel_.setToArr(5);
+            uzel_.setToArr(1);
+            uzel_.setToArr(7);
+            uzel_.setToArr(5);
+            test.add(5);
+            test.add(5);
+            test.add(7);
+            test.add(1);
+            assertEquals(test, uzel_.arr);
+            uzel_.delToArr(1);
+            test.remove(1);
+            assertEquals(test, uzel_.arr);
+        }
+
+}
