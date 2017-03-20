@@ -1,0 +1,17 @@
+package graf;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Cont {
+
+    Set<Integer> cont = new HashSet<>();;
+
+    public void setToCont(int id){
+        cont.add(id);
+    }
+
+    public Set<Integer> getCont(){
+        return cont;
+    }
+}
