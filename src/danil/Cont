@@ -5,13 +5,13 @@ import java.util.Set;
 
 public class Cont {
 
-    Set<Integer> cont = new HashSet<>();;
+    Set<String> cont = new HashSet<>();;
 
-    public void setToCont(int id){
+    public void setToCont(String id){
         cont.add(id);
     }
 
-    public Set<Integer> getCont(){
+    public Set<String> getCont(){
         return cont;
     }
 }
