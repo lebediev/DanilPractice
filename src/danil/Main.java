@@ -16,16 +16,18 @@ public class Main {
         u2.setToArr(0);
         u2.setToArr(5);
 
-       // System.out.println(u1.arr);
+        //System.out.println(u1.arr);
 
         u1.delToArr(5);
 
-    //    System.out.println(u1.arr);
-     //   System.out.println(u2.getArr());
+        //System.out.println(u1.arr);
+        //System.out.println(u2.getArr());
 
         Cont cont = new Cont();
-        cont.setToCont(u1);
-        cont.setToCont(u2);
+        cont.setToCont(1, u1);
+        cont.setToCont(2, u2);
+
+        System.out.println(cont.getCont());
 
     }
 
