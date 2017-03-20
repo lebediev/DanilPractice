@@ -10,11 +10,22 @@ public class Main {
         u1.setToArr(7);
         u1.setToArr(5);
 
+        Uzel u2 = new Uzel();
+        u2.setToArr(2);
+        u2.setToArr(1);
+        u2.setToArr(0);
+        u2.setToArr(5);
+
         System.out.println(u1.arr);
 
         u1.delToArr(5);
 
         System.out.println(u1.arr);
+        System.out.println(u2.getArr());
+
+        Cont cont = new Cont();
+        cont.setToCont("u1");
+        cont.setToCont("u2");
 
     }
 
