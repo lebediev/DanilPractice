@@ -24,8 +24,8 @@ public class Main {
         System.out.println(u2.getArr());
 
         Cont cont = new Cont();
-        cont.setToCont("u1");
-        cont.setToCont("u2");
+        cont.setToCont(u1);
+        cont.setToCont(u2);
 
     }
 
