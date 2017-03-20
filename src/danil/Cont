@@ -1,17 +1,19 @@
 package graf;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class Cont {
 
-    Set<Uzel> cont = new HashSet<>();;
+    Map<Integer, Uzel> cont = new HashMap<Integer, Uzel>();
 
-    public void setToCont(Uzel id){
-        cont.add(id);
+    public void setToCont(Integer a, Uzel b){
+        cont.put(a, b);
     }
 
-    public Set<Uzel> getCont(){
+    public Map<Integer, Uzel> getCont(){
         return cont;
     }
 }
